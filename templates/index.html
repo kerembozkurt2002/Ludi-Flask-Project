@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Summary</title>
+</head>
+<body>
+    <h1>User Summary</h1>
+    <h2>Company User Counts</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Company Name</th>
+                <th>User Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in company_summary %}
+            <tr>
+                <td>{{ entry['company_name'] }}</td>
+                <td>{{ entry['User Count'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h2>Ludi User Growth</h2>
+    <img src="data:image/png;base64,{{ ludi_growth_plot }}" alt="Ludi User Growth">
+</body>
+</html>
